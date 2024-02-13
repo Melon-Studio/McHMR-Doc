@@ -5,11 +5,13 @@ import './styles/vars.css'
 import 'element-plus/dist/index.css'
 import ElementPlus from 'element-plus'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import FooterMessage from '../theme/components/FooterMessage.vue'
 
 const theme: Theme = {
     ...DefaultTheme,
     Layout() {
         return h(DefaultTheme.Layout, null, {
+            'home-features-after': () => h(FooterMessage)
         })
     },
 }
@@ -20,5 +22,5 @@ export default {
             app.component(key, component)
         }
         app.use(ElementPlus)
-    }
+    },
 }

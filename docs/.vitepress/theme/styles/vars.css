@@ -212,3 +212,13 @@ i.el-icon {
   font-size: 18px;
   margin-right: 5px;
 }
+
+.VPHome {
+  padding-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .VPHome {
+    padding-bottom: 0 !important;
+  }
+}
