@@ -51,17 +51,34 @@ export const sharedConfig = defineConfig({
             }
         ],
 
+        sidebar: [
+            {
+                text: '简介',
+                items: [
+                    { text: '什么是 McHMR？', link: '/docs/guide/what-is-mchmr.md' },
+                    { text: '快速上手', link: '/docs/guide/start.md'}
+                ]
+            },
+            {
+                text: '其他',
+                items: [
+                    { text: '赞助名单', link: '/sponsors' },
+                    { text: '用户协议', link: '/docs/other/user-agreement' }
+                ]
+            }
+        ],
+
         footer: {
             copyright: 'Copyright © 2022-present Melon-Studio All Rights Reserved.',
-            message: '<p style="display: flex; align-items: center; justify-content: center;"><a href="https://beian.miit.gov.cn/" target="_blank" style="margin: 0 5px">陇ICP备2022000263号</a> | <img src="../logo01.png" style="display: inline-block; width: 20px; height: 20px; margin: 0 5px" />甘公网安备62011102000239号</p><p>Minecraft 商标归 Mojang Synergies AB 所有，本站与其没有从属关系</p><p>本工作室提供的软件等服务均与 Mojang Synergies AB 旗下的 Minecraft 游戏相关，合理遵守其商标使用<a href="https://www.minecraft.net/zh-hans/usage-guidelines#terms-brand_guidelines" target="_blank">规定</a>，与中国网易公司无关</p>',
+            message: '<p style="display: flex; align-items: center; justify-content: center;"><a href="https://beian.miit.gov.cn/" target="_blank" style="margin: 0 5px">陇ICP备2022000263号</a> | <img src="../logo01.png" style="display: inline-block; width: 20px; height: 20px; margin: 0 5px" />甘公网安备62011102000239号</p><p>Minecraft 商标归 Mojang Synergies AB 所有，本站与其没有从属关系</p><p>本工作室提供的软件等服务均与 Mojang Synergies AB 旗下的 Minecraft 游戏相关，合理遵守其商标使用<a href="https://www.minecraft.net/zh-hans/usage-guidelines#terms-brand_guidelines" target="_blank">规定</a>和第三方衍生产品规定，与中国网易公司无关</p>',
         },
 
         editLink: {
             pattern: 'https://github.com/Melon-Studio/McHMR-Doc/:path',
             text: '页面有问题？去编辑',
         },
-        outlineTitle: "本页目录",
-        lastUpdatedText: "最后更新于：",
+        outlineTitle: "页面导航",
+        lastUpdatedText: "最后更新于",
         docFooter: {
             prev: '上一页',
             next: '下一页'
