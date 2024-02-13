@@ -7,9 +7,6 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "peerDependencies": {
-    "vue": "^3.4.15"
-  },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.6.7",
