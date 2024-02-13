@@ -46,7 +46,6 @@ const maxTotal = ref(1);
 axios.get("https://api.dooper.top/api/afadian/getSponsorList?page=" + page.value).then(res => {
   fits.value = res.data.data.data.list;
   maxTotal.value = res.data.data.data.total_page;
-  console.log(res.data.data.data.total_page);
 });
 
 const pageChange = (event: number) => {
@@ -54,7 +53,6 @@ const pageChange = (event: number) => {
   axios.get("https://api.dooper.top/api/afadian/getSponsorList?page=" + page.value).then(res => {
     fits.value = res.data.data.data.list;
     maxTotal.value = res.data.data.data.total_page;
-    console.log(res.data.data.data.total_page);
   });
 }
 </script>
