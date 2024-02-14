@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,17 +27,53 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Get commit message
+        id: commit_message
+        run: echo "::set-output name=MESSAGE::$(git log --format=%B -n 1 ${{ github.sha }})"
       
-      - name: Build
-        run: pnpm run docs:build
+      - name: Parse commit message and update version
+        id: update_version
+        run: |
+          COMMIT_MESSAGE="${{ steps.commit_message.outputs.MESSAGE }}"
+          CURRENT_VERSION=$(cat .github/version.yml | yaml2json | jq -r '.version')
+          MAJOR=$(echo $CURRENT_VERSION | cut -d. -f1)
+          MINOR=$(echo $CURRENT_VERSION | cut -d. -f2)
+          PATCH=$(echo $CURRENT_VERSION | cut -d. -f3)
+
+          if [[ $COMMIT_MESSAGE == "First"* ]]; then
+            MAJOR=1
+            MINOR=0
+            PATCH=0
+          elif [[ $COMMIT_MESSAGE == "Fix"* ]]; then
+            PATCH=$((PATCH + 1))
+          elif [[ $COMMIT_MESSAGE == "Feat"* ]]; then
+            MINOR=$((MINOR + 1))
+            PATCH=0
+          elif [[ $COMMIT_MESSAGE == "Refactor"* ]]; then
+            MAJOR=$((MAJOR + 1))
+            MINOR=0
+            PATCH=0
+          else
+            echo "No version update needed for other commit types"
+            echo "::set-output name=NEW_VERSION::null"
+            exit 0  # Exit successfully without creating a release
+          fi
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          echo "Updating version from $CURRENT_VERSION to $NEW_VERSION"
+          echo "::set-output name=NEW_VERSION::$NEW_VERSION"
+
 
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
+        if: steps.update_version.outputs.NEW_VERSION != 'null'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: ${{ steps.update_version.outputs.NEW_VERSION }}
+          release_name: Release ${{ steps.update_version.outputs.NEW_VERSION }}
           draft: false
           prerelease: false
+
