@@ -5,6 +5,10 @@ export const sharedConfig = defineConfig({
     description: 'Minecraft 服务器客户端热更新解决方案',
     appearance: 'dark',
 
+    sitemap: {
+      hostname: 'https://doc.dooper.top'  
+    },
+
     lastUpdated: true,
 
     markdown: {
@@ -28,9 +32,13 @@ export const sharedConfig = defineConfig({
 
         nav: [
             {
+                text: '指南',
+                link: '/docs/guide/what-is-mchmr',
+            },
+            {
                 text: '赞助名单',
                 link: '/sponsors',
-          }  
+            }  
         ],
 
         socialLinks: [
