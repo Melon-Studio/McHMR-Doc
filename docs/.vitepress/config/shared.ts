@@ -28,6 +28,7 @@ export const sharedConfig = defineConfig({
 
     themeConfig: {
         logo: '/logo.svg',
+        
         outline: [2, 3],
 
         nav: [
@@ -77,13 +78,15 @@ export const sharedConfig = defineConfig({
             }
         ],
 
-
         editLink: {
             pattern: 'https://github.com/Melon-Studio/McHMR-Doc/tree/main/docs/:path',
             text: '页面有问题？去编辑',
         },
+
         outlineTitle: "页面导航",
+
         lastUpdatedText: "最后更新于",
+
         docFooter: {
             prev: '上一页',
             next: '下一页'
