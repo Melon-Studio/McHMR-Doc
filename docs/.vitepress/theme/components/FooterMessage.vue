@@ -3,14 +3,20 @@
         <div class="container">
             <div class="message">
                 <p style="display:flex;align-items:center;justify-content:center;"><a href="https://beian.miit.gov.cn/"
-                        target="_blank" style="margin:0 5px; text-decoration: underline">陇ICP备2022000263号</a>|<img src="../../../public/logo01.png"
-                        style="display:inline-block;width:20px;height:20px;margin:0 5px" alt="公网安备Logo" />甘公网安备62011102000239号</p>
+                        target="_blank" rel="nofollow"
+                        style="margin:0 5px; text-decoration: underline">陇ICP备2022000263号</a>|<img
+                        src="../../../public/logo01.png"
+                        style="display:inline-block;width:20px;height:20px;margin:0 5px"
+                        alt="公网安备Logo" />甘公网安备62011102000239号</p>
                 <p>Minecraft 商标归 Mojang Synergies AB 所有，本站与其没有从属关系</p>
                 <p>本工作室提供的软件等服务均与 Mojang Synergies AB 旗下的 Minecraft 游戏相关，合理遵守其商标使用<a
-                        href="https://www.minecraft.net/zh-hans/usage-guidelines" target="_blank" style="text-decoration: underline">规定</a>，与中国网易公司无关
+                        href="https://www.minecraft.net/zh-hans/usage-guidelines" target="_blank" rel="nofollow"
+                        style="text-decoration: underline">规定</a>，与中国网易公司无关
                 </p>
             </div>
-            <p class="copyright">Copyright © 2022-present Melon-Studio All Rights Reserved.</p>
+            <p class="copyright">Copyright © 2022-present Melon-Studio All Rights Reserved. Released under the <a
+                    href="https://github.com/Melon-Studio/McHMR-Doc/blob/main/LICENSE" rel="nofollow" target="_blank"
+                    style="text-decoration: underline;">MIT</a> License.</p>
         </div>
     </footer>
 </template>

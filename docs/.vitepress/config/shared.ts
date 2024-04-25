@@ -24,6 +24,7 @@ export const sharedConfig = defineConfig({
     head: [
         ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
         ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+        ['meta', { name: 'keywords', content: 'Minecraft,我的世界,我的世界服务器,MC,麦块,MCBBS,我的世界客户端,热更新,自动更新,服主,腐竹' }]
     ],
 
     themeConfig: {
@@ -67,6 +68,15 @@ export const sharedConfig = defineConfig({
                 items: [
                     { text: '什么是 McHMR？', link: '/docs/guide/what-is-mchmr.md' },
                     { text: '快速上手', link: '/docs/guide/start.md'}
+                ]
+            },
+            {
+                text: '开放 API',
+                items: [
+                    { text: '简介', link: '/docs/apis/start.md' },
+                    { text: '身份验证 API', link: '/docs/apis/token.md' },
+                    { text: '更新服务 API', link: '/docs/apis/update.md' },
+                    { text: '启动器相关 API', link: '/docs/apis/launcher.md' }
                 ]
             },
             {

@@ -1,7 +1,7 @@
 <template>
   <div style="width: 640px; height: 215px;" v-loading="loading" background="#000000" class="afadian">
-    <iframe src="https://afdian.net/leaflet?slug=Melon_Studio" width="640" scrolling="no" height="215" frameborder="0"
-    @load="iframeLoad"></iframe>
+    <iframe rel="nofollow" src="https://afdian.net/leaflet?slug=Melon_Studio" width="640" scrolling="no" height="215"
+      frameborder="0" @load="iframeLoad"></iframe>
   </div>
   <div class="sponsors_outer">
     <h2>❤ 赞助名单 ❤</h2>
@@ -11,14 +11,8 @@
         <span class="title">{{ fit.user.name }}</span>
       </div>
     </div>
-    <el-pagination 
-    small
-    background
-    class="pagination" 
-    :current-page="page" 
-    layout="prev, pager, next" 
-    :page-count="maxTotal" 
-    @current-change="pageChange($event)" />
+    <el-pagination small background class="pagination" :current-page="page" layout="prev, pager, next"
+      :page-count="maxTotal" @current-change="pageChange($event)" />
   </div>
 </template>
 
