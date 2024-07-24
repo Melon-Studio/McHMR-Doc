@@ -6,7 +6,7 @@ export const sharedConfig = defineConfig({
     appearance: 'dark',
 
     sitemap: {
-      hostname: 'https://doc.dooper.top'  
+        hostname: 'https://doc.dooper.top'
     },
 
     lastUpdated: true,
@@ -24,7 +24,29 @@ export const sharedConfig = defineConfig({
     head: [
         ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
         ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
-        ['meta', { name: 'keywords', content: 'Minecraft,我的世界,我的世界服务器,MC,麦块,MCBBS,我的世界客户端,热更新,自动更新,服主,腐竹' }]
+        ['meta', { name: 'keywords', content: 'Minecraft,我的世界,我的世界服务器,MC,麦块,MCBBS,我的世界客户端,热更新,自动更新,服主,腐竹' }],
+
+        
+        ['script', { async: 'async', src: 'https://www.googletagmanager.com/gtag/js?id=G-NML2HM7B6Z' }],
+        ['script', {},
+            `window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-NML2HM7B6Z');
+         `
+        ],
+        ['script', {},
+            `
+         var _hmt = _hmt || [];
+          (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?958132d2cbb7c1c3cca0de478ed0a165";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+          })();
+         `
+        ],
+        ['script', { async: 'async', src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8805772686644245', crossorigin: 'anonymous' }]
     ],
 
     themeConfig: {
@@ -40,7 +62,7 @@ export const sharedConfig = defineConfig({
             {
                 text: '赞助名单',
                 link: '/sponsors',
-            }  
+            }
         ],
 
         socialLinks: [
@@ -97,7 +119,7 @@ export const sharedConfig = defineConfig({
 
         editLink: {
             pattern: 'https://github.com/Melon-Studio/McHMR-Doc/tree/main/docs/:path',
-            text: '页面有问题？去编辑',
+            text: '内容有问题？去编辑',
         },
 
         outlineTitle: "页面导航",

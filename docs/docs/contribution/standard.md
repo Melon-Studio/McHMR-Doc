@@ -4,7 +4,7 @@
 
 你需要注意的是：`McHMR` 仓库有众多个，你可以选择一个你熟悉语言或者技术栈的仓库进行代码贡献。
 
-以下内容适合不熟悉使用 `Git` 版本控制工具进行代码贡献的用户，如果你对 `Git` 提交代码的流程较为熟悉，可以跳到章节。
+以下内容适合不熟悉使用 `Git` 版本控制工具进行代码贡献的用户，如果你对 `Git` 提交代码的流程很熟悉，可以跳到代码规范章节（但还是非常建议阅览一遍）。
 
 ## 设置你的仓库
 
@@ -16,9 +16,12 @@
 
 为了能够使你更好的理解本篇内容，为你罗列了一些名词：
 
-- `repo`：仓库，指 `Github` 的储存库；
-- `Forked repo`, `Fork`：通过 `Github` 的 `Fork` 功能，将 `Base repo` 进行 `Fork`，`Fork` 之后的仓库成为 `Forked repo`；
+- `repo`: 仓库，指 `Github` 的储存库；
+- `Forked repo`, `Fork`: 通过 `Github` 的 `Fork` 功能，将 `Base repo` 进行 `Fork`，`Fork` 之后的仓库成为 `Forked repo`；
 - `Cloned repo`: 这是你在本地克隆的仓库；
+- `origin`: 这是你本地克隆仓库的源，通常为 `Forked repo`；
+- `push`: 推送代码，`push request` 推送请求
+- `pull`: 拉取代码，`pull request` 拉取请求
 
 ## Repo 之间的关系
 

@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: 赞助名单
       link: /sponsors
+    - theme: alt
+      text: 内测报名
+      link: https://wj.qq.com/s2/15005433/9854/
 features:
   - title: 启动器支持
     icon: 🚀 
