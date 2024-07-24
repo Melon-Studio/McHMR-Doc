@@ -80,6 +80,13 @@ export const sharedConfig = defineConfig({
                 ]
             },
             {
+                text: '贡献代码',
+                items: [
+                    { text: '为开源的 McHMR 贡献你的代码', link: '/docs/contribution/standard.md' },
+                    { text: '提交你的第一个 pull request', link: '/docs/contribution/submitting-your-first-pull-request.md' }
+                ]
+            },
+            {
                 text: '其他',
                 items: [
                     { text: '赞助名单', link: '/sponsors' },
