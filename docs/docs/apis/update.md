@@ -19,7 +19,7 @@
 
 | 请求方式 | GET                           |
 | -------- | ----------------------------- |
-| 请求地址 | /prod-api/v1/GetLatestVersion |
+| 请求地址 | /v1/update/GetLatestVersion |
 
 请求 header 参数：
 
@@ -43,11 +43,12 @@
 ## GetLatestVersionHashList
 
 获取最新版本游戏的文件哈希列表。
+
 开发者需要将哈希列表数据在本地进行客户端校验。
 
 | 请求方式 | GET                           |
 | -------- | ----------------------------- |
-| 请求地址 | /prod-api/v1/GetLatestVersionHashList |
+| 请求地址 | /v1/update/GetLatestVersionHashList |
 
 请求 header 参数：
 
@@ -69,11 +70,11 @@
 
 ## GenerateIncrementalPackage
 
-生成增量包。
+生成增量包，请求该接口后需要等待服务器传数据，服务器会生成增量包，该操作耗时较长，客户端连接超时时间建议设置 1 分钟。
 
 | 请求方式 | POST                             |
 | -------- | ---------------------------------- |
-| 请求地址 | /prod-api/v1/GenerateIncrementalPackage |
+| 请求地址 | /v1/update/GenerateIncrementalPackage |
 
 请求 header 参数：
 
@@ -85,7 +86,7 @@
 
 | 参数  | 必填 | 简介     | 类型   | 示例值             |
 | ----- | ---- | -------- | ------ | ------------------ |
-| data | 是   | 增量包内容 | json | . |
+| data | 是   | 增量包内容 | String[] | 文件以逗号隔开 |
 
 请求示例：
 
@@ -99,15 +100,57 @@
 }
 ```
 
-返回类型为增量包（zip）,可以直接覆盖至游戏根目录。
+返回示例：
+
+```json
+{
+  "code": 0,
+  "msg": "string",
+  "data": {
+    "packageHash": "packageHash",
+  }
+}
+```
+
+## download
+
+下载增量包，将 GenerateIncrementalPackage 返回的 packageHash 参数传入后，服务器会返回文件，客户端接收即可。
+
+| 请求方式 | GET                             |
+| -------- | ---------------------------------- |
+| 请求地址 | /v1/update/download |
+
+请求 header 参数：
+
+| 参数  | 必填 | 简介     | 类型   | 示例值             |
+| ----- | ---- | -------- | ------ | ------------------ |
+| token | 是   | 身份验证 | Authorization Bearer Token | Bearer d4a6sda65sd1a65da4 |
+
+请求参数：
+
+| 参数  | 必填 | 简介     | 类型   | 示例值             |
+| ----- | ---- | -------- | ------ | ------------------ |
+| params | 是   | 文件哈希值 | String | 8DF7S9ADF87S9 |
+
+请求示例：
+
+```url
+GET: https://example.com/api/v1/update/download?fileHash=8DF7S9ADF87S9
+```
+
+返回示例：
+
+```json
+二进制文件
+```
 
 ## GetWhitelist
 
-获取白名单。
+获取白名单，每个值以换行符分割。
 
 | 请求方式 | GET                                  |
 | -------- | ------------------------------------- |
-| 请求地址 | /prod-api/v1/GetWhitelist             |
+| 请求地址 | /v1/update/GetWhitelist             |
 
 请求 header 参数：
 
@@ -119,7 +162,7 @@
 
 | 参数  |  简介     | 类型   | 示例值             |
 | -----  | -------- | ------ | ------------------ |
-| whilelist |  白名单 | 字符串数组 | ...... |
+| whilelist |  白名单 | String | ...... |
 
 返回示例：
 
@@ -128,7 +171,7 @@
   "code": 0,
   "msg": "string",
   "data": {
-    "whilelist": "array",
+    "whilelist": "",
   }
 }
 ```

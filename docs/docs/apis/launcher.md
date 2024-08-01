@@ -1,12 +1,12 @@
 # 启动器相关 API
 
-## GetLatestNotices
+## GetLatestNotices(暂不支持)
 
 获取最新的公告。
 
 | 请求方式 | GET                           |
 | -------- | ----------------------------- |
-| 请求地址 | /prod-api/v1/GetLatestNotices |
+| 请求地址 | /v1/launcher/GetLatestNotices |
 
 请求参数：
 
@@ -33,13 +33,13 @@
 }
 ```
 
-## GetHelps
+## GetHelps(暂不支持)
 
 获取帮助信息。
 
 | 请求方式 | GET                   |
 | -------- | --------------------- |
-| 请求地址 | /prod-api/v1/GetHelps |
+| 请求地址 | /v1/launcher/GetHelps |
 
 请求参数：
 
@@ -98,13 +98,13 @@
 }
 ```
 
-## GetLauncherBackground
+## GetLauncherBackground(暂不支持)
 
 获取启动器背景图。
 
 | 请求方式 | GET                                |
 | -------- | ---------------------------------- |
-| 请求地址 | /prod-api/v1/GetLauncherBackground |
+| 请求地址 | /v1/launcher/GetLauncherBackground |
 
 请求参数：
 
