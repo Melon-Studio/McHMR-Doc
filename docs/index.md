@@ -20,7 +20,7 @@ hero:
       link: /sponsors
     - theme: alt
       text: 下载使用
-      link: https://xiaofans.lanzouq.com/if8HU264jqve
+      link: /update-timeline
 features:
   - title: 启动器支持
     icon: 🚀 
