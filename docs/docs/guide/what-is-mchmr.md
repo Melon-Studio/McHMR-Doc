@@ -1,6 +1,6 @@
 # McHMR 是什么？
 
-McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务器客户端无法完成游戏开始前的自动更新，为其提供热更新服务而开发的一系列的软件和服务的总称，你可以称这一系列都叫做 McHMR，系列软件都包含了以下内容：
+McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务器客户端无法完成游戏开始前的自动更新，为其提供自动更新服务而开发的一系列的软件和服务的总称，你可以称这一系列都叫做 McHMR，系列软件都包含了以下内容：
 
 - McHMR-BackEnd
 
@@ -16,15 +16,15 @@ McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务�
 
 - McHMR-Doc-API
 
-    这是 McHMR 官方文档提供的第三方 API 接口，第三方启动器可以通过此 API 完成热更新的功能对接，是其他第三方启动器支持热更新功能。
+    这是 McHMR 官方文档提供的第三方 API 接口，第三方启动器可以通过此 API 完成自动更新的功能对接，是其他第三方启动器支持自动更新功能。
 
 - McHMR-Launcher
 
-    这是 McHMR 分叉的 [Hello Minecraft! Launcher(HMCL)](https://github.com/HMCL-dev/HMCL) 启动器，使其支持了热更新功能。
+    这是 McHMR 分叉的 [Hello Minecraft! Launcher(HMCL)](https://github.com/HMCL-dev/HMCL) 启动器，使其支持了自动更新功能。
 
 - McHMR-Updater
 
-    这是 McHMR 的更新器，如果你不想使用启动器支持的热更新功能，你可以使用更新器来实现热更新功能，目前已经开源在 GitHub [点击这里](https://github.com/Melon-Studio/McHMR-Updater-v2)可以直接访问。
+    这是 McHMR 的更新器，如果你不想使用启动器支持的自动更新功能，你可以使用更新器来实现自动更新功能，目前已经开源在 GitHub [点击这里](https://github.com/Melon-Studio/McHMR-Updater-v2)可以直接访问。
 
 ## 使用场景
 

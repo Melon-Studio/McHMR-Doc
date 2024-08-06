@@ -35,7 +35,7 @@
   "msg": "string",
   "data": {
     "latestVersion": "1.2.2",
-    "description": "此版本添加了苹果皮模组，并修复了模组不兼容引起的奔溃问题。"
+    "description": "此版本添加了苹果皮模组，并修复了模组不兼容引起的崩溃问题。"
   }
 }
 ```
