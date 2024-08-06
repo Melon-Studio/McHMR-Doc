@@ -1,5 +1,7 @@
 # McHMR 是什么？
 
+
+
 McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务器客户端无法完成游戏开始前的自动更新，为其提供自动更新服务而开发的一系列的软件和服务的总称，你可以称这一系列都叫做 McHMR，系列软件都包含了以下内容：
 
 - McHMR-BackEnd
@@ -18,9 +20,13 @@ McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务�
 
     这是 McHMR 官方文档提供的第三方 API 接口，第三方启动器可以通过此 API 完成自动更新的功能对接，是其他第三方启动器支持自动更新功能。
 
-- McHMR-Launcher
+- McHMR-Launcher-for-HMCL
 
     这是 McHMR 分叉的 [Hello Minecraft! Launcher(HMCL)](https://github.com/HMCL-dev/HMCL) 启动器，使其支持了自动更新功能。
+
+- McHMR-Launcher-for-PCL2
+
+    这是 McHMR 分叉的 [Plain Craft Launcher(PCL2)](https://github.com/Hex-Dragon/PCL2) 启动器，使其支持了自动更新功能。
 
 - McHMR-Updater
 

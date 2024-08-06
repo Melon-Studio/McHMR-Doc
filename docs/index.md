@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 什么是 McHMR？
-      link: docs/guide/start
+      link: docs/guide/what-is-mchmr
     - theme: alt
       text: 赞助名单
       link: /sponsors

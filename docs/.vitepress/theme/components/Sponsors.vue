@@ -16,7 +16,7 @@
       </div>
       <div style="height: 68px; width: 220px; display: flex; flex-direction: row-reverse;">
         <a class="afd_link"
-          href="https://afdian.net/a/Melon_Studio?utm_source=https://doc.dooper.top/sponsors.html">赞助</a>
+          href="https://afdian.com/a/Melon_Studio?utm_source=https://doc.dooper.top/sponsors.html">赞助</a>
       </div>
     </div>
   </div>
