@@ -15,10 +15,12 @@
     "axios": "^1.6.7",
     "crypto-js": "^4.2.0",
     "element-plus": "^2.5.5",
+    "pagefind": "^1.1.1",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-element-plus": "^0.8.0",
     "unplugin-vue-components": "^0.26.0",
-    "vitepress": "1.0.0-rc.40"
+    "vitepress": "1.0.0-rc.40",
+    "vitepress-plugin-pagefind": "^0.4.10"
   },
   "type": "module"
 }
