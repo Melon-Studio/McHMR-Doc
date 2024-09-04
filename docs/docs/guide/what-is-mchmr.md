@@ -92,7 +92,7 @@ McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务�
 
 McHMR 的官方指南视频预计正式版上线后发布在 Bilibili。将由开发者录制、剪辑，它涵盖了 Windows Server、Linux 的手动部署和 Docker 自动部署，及使用示例。观看视频，这是使用 McHMR 的最佳方式，当然，如果你有阅读文档的能力，可以直接参阅文档。
 
-## 为什么叫 McHRM?
+## 为什么叫 McHMR?
 
 当年使用 McHMR 作为项目名称的初衷是通过开发热更新模组，达到游戏内的热更新，但由于种种原因放弃了，而 McHMR 这一名称被延续了下来，本质上已不再是热更新，而是通过外部程序达成自动更新。
 

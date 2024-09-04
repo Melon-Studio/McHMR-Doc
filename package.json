@@ -19,8 +19,7 @@
     "unplugin-auto-import": "^0.17.5",
     "unplugin-element-plus": "^0.8.0",
     "unplugin-vue-components": "^0.26.0",
-    "vitepress": "1.0.0-rc.40",
-    "vitepress-plugin-pagefind": "^0.4.10"
+    "vitepress": "1.0.0-rc.40"
   },
   "type": "module"
 }

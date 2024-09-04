@@ -24,10 +24,10 @@
   --c-green-soft: #633131;
 
   /* light theme is a bit different */
-  --vp-c-brand-1: var(--vp-c-green-1);
-  --vp-c-brand-2: var(--vp-c-green-2);
-  --vp-c-brand-3: var(--vp-c-green-3);
-  --vp-c-brand-soft: var(--vp-c-green-soft);
+  --vp-c-brand-1: var(--c-yellow-1);
+  --vp-c-brand-2: var(--c-yellow-2);
+  --vp-c-brand-3: var(--c-yellow-3);
+  --vp-c-brand-soft: var(--c-yellow-soft-1);
 
   --c-text-dark-1: #d9e6eb;
   --c-text-dark-2: #c4dde6;
@@ -36,8 +36,8 @@
   --c-text-light-2: #476582;
   --c-text-light-3: #90a4b7;
 
-  --vp-c-brand-dark: var(--c-green-soft);
-  --vp-c-brand-darker: var(--c-green-soft);
+  --vp-c-brand-dark: var(--c-yellow-soft-1);
+  --vp-c-brand-darker: var(--c-yellow-soft-1);
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
   --vp-c-brand-text: var(--c-text-light-1);
   --c-bg-accent: var(--c-white-dark);
@@ -53,11 +53,11 @@
 }
 
 html.dark:root {
-  /* --c-black: #ffffff;
-  --c-white: #000000; */
-  /* --c-divider-light: rgba(60, 60, 67, 0.12);
-  --c-divider-dark: rgba(84, 84, 88, 0.48); */
-  /* --c-brand-light: var(--c-yellow-light); */
+  --c-black: #ffffff;
+  --c-white: #000000; 
+  --c-divider-light: rgba(60, 60, 67, 0.12);
+  --c-divider-dark: rgba(84, 84, 88, 0.48);
+  --c-brand-light: var(--c-yellow-light);
 
   --vp-c-brand-1: var(--c-yellow-1);
   --vp-c-brand-2: var(--c-yellow-2);
@@ -75,7 +75,7 @@ html.dark:root {
   --c-divider: var(--c-divider-dark);
   --c-bg-accent: var(--c-black-light);
   /* --vp-code-inline-bg: var(--vp-c-black-light); */
-
+  /*
   --vp-c-bg: var(--c-black);
   --vp-c-bg-soft: var(--c-black-light);
   --vp-c-bg-soft-up: var(--c-black-lighter);
@@ -93,7 +93,8 @@ html.dark:root {
     var(--c-yellow-2) 30%,
     var(--c-green-2)
   );
-}
+  */
+} 
 
 html.dark .DocSearch {
   --docsearch-hit-active-color: var(--c-text-light-1);
@@ -128,7 +129,7 @@ html.dark .DocSearch {
   );
   --vp-home-hero-image-background-image: linear-gradient(
     15deg,
-    var(--c-yellow-2) 65%,
+    var(--c-yellow-2) 15%,
     var(--c-green-1) 30%
   );
   --vp-home-hero-image-filter: blur(40px);
@@ -221,4 +222,8 @@ i.el-icon {
   .VPHome {
     padding-bottom: 0 !important;
   }
+}
+
+.brand {
+  color: #ffffff !important;
 }

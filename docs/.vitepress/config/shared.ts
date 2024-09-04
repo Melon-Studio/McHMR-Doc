@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export const sharedConfig = defineConfig({
     title: 'McHMR',
-    description: 'Minecraft 服务器客户端热更新解决方案',
+    description: 'Minecraft 服务器客户端自动更新解决方案',
     appearance: 'dark',
 
     sitemap: {
@@ -60,6 +60,10 @@ export const sharedConfig = defineConfig({
     ],
 
     themeConfig: {
+        search: {
+            provider: 'local'
+        },
+        
         logo: '/logo.svg',
 
         outline: [2, 3],
