@@ -26,22 +26,21 @@ McHMR 版本管理端使用 Java 1.8 启动版本管理端后端，使用 MySQL 
 
 查阅[此篇](https://www.cnblogs.com/nojacky/p/9497724.html)文档，了解如何在 Windows Server 上安装 Java 1.8，并配置环境变量（当然你也可以直接修改启动脚本指定 Java 位置，就不用配置环境变量了）。
 
-查阅[此篇](https://www.cnblogs.com/haha029/p/16855562.html)文档，了解如何在 Windows Server 上安装 MySQL，你需要安装版本大于 8.0 的版本。
+查阅[此篇](https://www.cnblogs.com/haha029/p/16855562.html)文档，了解如何在 Windows Server 上安装 MySQL，你需要安装版本大于 8.0 的版本。（可以使用小皮面板简化此操作）
 
-查阅[此篇](https://www.cnblogs.com/taiyonghai/p/9402734.html)文档，了解如何在 Windows Server 上安装 Nginx，你需要安装最新版本的 Nginx。
+查阅[此篇](https://www.cnblogs.com/taiyonghai/p/9402734.html)文档，了解如何在 Windows Server 上安装 Nginx，你需要安装最新版本的 Nginx。（可以使用小皮面板简化此操作）
 
-访问 [Redis 的 GitHub 仓库](https://github.com/tporadowski/redis/releases)下载`Redis-x64-5.0.14.1.msi
-`，并安装即可。
+访问 [Redis 的 GitHub 仓库](https://github.com/tporadowski/redis/releases)下载`Redis-x64-5.0.14.1.msi`，并安装即可。
 
 #### Linux
 
-查阅[此篇](https://www.cnblogs.com/cao-lei/p/14768643.html)文档，了解如何在 Linux 上安装 Java 1.8，并配置环境变量（当然你也可以直接修改启动脚本指定 Java 位置，就不用配置环境变量了）。
+查阅[此篇](https://www.cnblogs.com/cao-lei/p/14768643.html)文档，了解如何在 Linux 上安装 Java 1.8，并配置环境变量（当然你也可以直接修改启动脚本指定 Java 位置，就不用配置环境变量了）。（可以使用宝塔面板简化此操作）
 
-查阅[此篇](https://www.cnblogs.com/MrYoodb/p/15811199.html)文档，了解如何在 Linux 上安装 MySQL，你需要安装版本大于 8.0 的版本。
+查阅[此篇](https://www.cnblogs.com/MrYoodb/p/15811199.html)文档，了解如何在 Linux 上安装 MySQL，你需要安装版本大于 8.0 的版本。（可以使用宝塔面板简化此操作）
 
-查阅[此篇](https://www.cnblogs.com/orangebooks/p/12058830.html)文档，了解如何在 Linux 上安装 Nginx，你需要安装最新版本的 Nginx。
+查阅[此篇](https://www.cnblogs.com/orangebooks/p/12058830.html)文档，了解如何在 Linux 上安装 Nginx，你需要安装最新版本的 Nginx。（可以使用宝塔面板简化此操作）
 
-查阅[此篇](https://cloud.tencent.com/developer/article/2291807)文档，了解如何在 Linux 上安装 Redis，你需要安装大于 5.0 版本的 Redis。
+查阅[此篇](https://cloud.tencent.com/developer/article/2291807)文档，了解如何在 Linux 上安装 Redis，你需要安装大于 5.0 版本的 Redis。（可以使用宝塔面板简化此操作）
 
 
 <style>

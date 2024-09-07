@@ -48,13 +48,19 @@
     CREATE DATABASE mchmr;
     ```
 
-3. 创建完成后，按 Ctrl + C 退出数据库操作，然后导入数据库，下面的数据库文件，复制后端目录中 mysql 目录中的 mchmr.sql 的绝对路径粘贴上去
+3. 使用数据库
 
-    ```sh
-    mysql -u 你的用户名 -p -h localhost -P 3306 -D "数据库文件"
+    ```sql
+    USE mchmr;
     ```
 
-4. 然后打开后端目录中的 application.yml 文件，第 55,56,57 行为你的数据库配置。
+4. 然后导入数据库，下面的数据库文件，复制后端目录中 mysql 目录中的 mchmr.sql 的绝对路径粘贴上去
+
+    ```sql
+    SOURCE "数据库文件"
+    ```
+
+5. 然后打开后端目录中的 application.yml 文件，第 55,56,57 行为你的数据库配置。
 
     如果你在创建数据库阶段没有修改数据库名称 mchmr，第 55 行可以忽略修改；
 
@@ -62,7 +68,7 @@
 
     第二行的端口填问卷提交的后端访问端口，没填写不用管。
 
-5. 双击 Start for windows.bat 启动；
+6. 双击 Start for windows.bat 启动；
 
 ## Linux
 
