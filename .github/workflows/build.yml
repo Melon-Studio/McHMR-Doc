@@ -32,8 +32,15 @@ jobs:
         id: commit_message
         run: echo "::set-output name=MESSAGE::$(git log --format=%B -n 1 ${{ github.sha }})"
 
-      - name: Install yq
-        run: sudo apt-get install yq
+      - name: Install Snap (if not already installed)
+        run: |
+          if! command -v snap &> /dev/null
+          then
+            sudo apt install snapd
+          fi
+
+      - name: Install yq via Snap
+        run: sudo snap install yq
 
       - name: Parse commit message and update version
         id: update_version
