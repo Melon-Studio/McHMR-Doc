@@ -32,15 +32,8 @@ jobs:
         id: commit_message
         run: echo "::set-output name=MESSAGE::$(git log --format=%B -n 1 ${{ github.sha }})"
 
-      - name: Install Snap (if not already installed)
-        run: |
-          if! command -v snap &> /dev/null
-          then
-            sudo apt install snapd
-          fi
-
       - name: Install yq via Snap
-        run: sudo snap install yq
+        run: sudo apt install snapd && sudo snap install yq
 
       - name: Parse commit message and update version
         id: update_version
@@ -65,9 +58,9 @@ jobs:
             MINOR=0
             PATCH=0
           else
-            echo "No version update needed for other commit types"
+            echo "No version update needed for other commit types."
             echo "::set-output name=NEW_VERSION::null"
-            exit 0  # Exit successfully without creating a release
+            exit 0
           fi
 
           NEW_VERSION="$MAJOR.$MINOR.$PATCH"
