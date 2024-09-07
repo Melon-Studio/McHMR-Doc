@@ -33,14 +33,13 @@
 
 ### 后端部署
 
-
 1. 打开 CMD 输入：
 
     ```sh
     mysql -u 你的用户名 -p
     ```
 
-    然后输入密码，回车即可登录。
+    然后输入密码，回车即可登录（如果这一步骤出现了未识别的命令错误，说明没有配置 Mysql 环境变量）。
 
 2. 创建数据库
 
@@ -54,22 +53,30 @@
     USE mchmr;
     ```
 
-4. 然后导入数据库，下面的数据库文件，复制后端目录中 mysql 目录中的 mchmr.sql 的绝对路径粘贴上去
+4. 然后导入数据库，下面的数据库文件，复制后端目录中 mysql 目录中的 mchmr.sql 的绝对路径粘贴上去（注意使用单引号，双引号会报错）
 
     ```sql
-    SOURCE "数据库文件"
+    SOURCE '数据库文件'
     ```
 
 5. 然后打开后端目录中的 application.yml 文件，第 55,56,57 行为你的数据库配置。
 
-    如果你在创建数据库阶段没有修改数据库名称 mchmr，第 55 行可以忽略修改；
+    ```yml
+    53    datasource:
+    54        master:
+    55            url: jdbc:mysql://localhost:3306/mchmr?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    56            username: root
+    57            password: 123456
+    ```
 
-    56,57 分别修改为你数据库的 用户名和密码
+    如果你在创建数据库阶段没有修改数据库名称 mchmr，第 55 行可以忽略修改，如果你在创建数据库阶段修改了数据库名称，只需要将其中的 mchmr 修改为你修改的数据库名称；
+
+    56, 57 分别修改为你数据库的`用户名`和`密码`；
 
     第二行的端口填问卷提交的后端访问端口，没填写不用管。
 
-6. 双击 Start for windows.bat 启动；
+6. 双击 `Start for windows.bat` 文件启动；
 
 ## Linux
 
-Linux 请参考 Windows 部署过程。
+Linux 请参考 Windows 部署过程（不熟悉 Linux，可以安装宝塔面板后操作）。

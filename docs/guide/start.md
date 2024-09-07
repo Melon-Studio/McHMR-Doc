@@ -1,6 +1,6 @@
 # 快速上手
 
-::: warning <el-icon><Warning /></el-icon> 注意
+::: warning 注意
 旧版本的 McHMR 已经停止维护，新版本已经开放公测。
 :::
 
@@ -41,11 +41,3 @@ McHMR 版本管理端使用 Java 1.8 启动版本管理端后端，使用 MySQL 
 查阅[此篇](https://www.cnblogs.com/orangebooks/p/12058830.html)文档，了解如何在 Linux 上安装 Nginx，你需要安装最新版本的 Nginx。（可以使用宝塔面板简化此操作）
 
 查阅[此篇](https://cloud.tencent.com/developer/article/2291807)文档，了解如何在 Linux 上安装 Redis，你需要安装大于 5.0 版本的 Redis。（可以使用宝塔面板简化此操作）
-
-
-<style>
-    .custom-block.warning {
-        color: #e6a23c;
-        background-color: #fdf6ec;
-    }
-</style>

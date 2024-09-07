@@ -227,3 +227,17 @@ i.el-icon {
 .brand {
   color: #ffffff !important;
 }
+
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}
+
+.VPSidebar::-webkit-scrollbar { width: 0 !important }
+
+html::-webkit-scrollbar { width: 0 !important }
+
+.viewer-canvas::-webkit-scrollbar { width: 0 !important }
+
+.header-anchor {
+  display: none !important;
+}
