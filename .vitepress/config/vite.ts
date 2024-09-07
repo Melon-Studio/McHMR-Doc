@@ -10,7 +10,8 @@ const viteConfg = {
     ssr: {
         noExternal: [
             '@nolebase/vitepress-plugin-enhanced-readabilities',
-            'vitepress-plugin-nprogress'
+            'vitepress-plugin-nprogress',
+            '@nolebase/vitepress-plugin-inline-link-preview'
         ],
     },
 

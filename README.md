@@ -1,4 +1,4 @@
-<p align="center"><img width="144px" src="./docs/public/logo.svg" /></p>
+<p align="center"><img width="144px" src="https://github.com/Melon-Studio/McHMR-Doc/blob/main/public/logo.svg" /></p>
 <h1 align="center">McHMR-Doc</h1>
 <p align="center">Minecraft 服务器客户端热更新解决方案（文档项目）</p>
 
@@ -42,4 +42,4 @@ pnpm run docs:dev
 
 ## 许可证
 
-本开源项目遵循国际 MIT 开源许可证，具体内容请详细阅读 [LICENSE](./LICENSE) 文件。
+本开源项目遵循国际 MIT 开源许可证，具体内容请详细阅读 [LICENSE](https://github.com/Melon-Studio/McHMR-Doc/blob/main/LICENSE) 文件。
