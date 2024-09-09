@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@nolebase/markdown-it-bi-directional-links": "^2.5.0",
     "@nolebase/markdown-it-unlazy-img": "^2.5.0",
     "@nolebase/vitepress-plugin-enhanced-mark": "^2.5.0",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.5.0",

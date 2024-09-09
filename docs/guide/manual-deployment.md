@@ -61,19 +61,29 @@
 
 5. 然后打开后端目录中的 application.yml 文件，第 55,56,57 行为你的数据库配置。
 
-    ```yml
-    53    datasource:
-    54        master:
-    55            url: jdbc:mysql://localhost:3306/mchmr?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-    56            username: root
-    57            password: 123456
+    ```yml:line-numbers=48 {1}
+    ...
+                validationQuery: SELECT 1 FROM DUAL
+                testWhileIdle: true
+                testOnBorrow: false
+                testOnReturn: false
+            datasource:
+                master:
+                    url: jdbc:mysql://localhost:3306/mchmr?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8 # [!code focus]
+                    username: root # [!code focus]
+                    password: 123456 # [!code focus]
+
+    redis:
+        host: localhost
+        port: 6379
+        database: 1
+        timeout: 10s
+    ...
     ```
 
     如果你在创建数据库阶段没有修改数据库名称 mchmr，第 55 行可以忽略修改，如果你在创建数据库阶段修改了数据库名称，只需要将其中的 mchmr 修改为你修改的数据库名称；
 
-    56, 57 分别修改为你数据库的`用户名`和`密码`；
-
-    第二行的端口填问卷提交的后端访问端口，没填写不用管。
+    56, 57 分别修改为你数据库的<mark>用户名</mark>和<mark>密码</mark>；
 
 6. 双击 `Start for windows.bat` 文件启动；
 

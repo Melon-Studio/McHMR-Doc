@@ -12,7 +12,13 @@ const themeConfig: DefaultTheme.Config = {
     nav: [
         {
             text: '指南',
-            link: '/docs/guide/what-is-mchmr',
+            items: [
+                { text: '管理端主页', link: '/docs/usage/home.md' },
+                { text: '版本管理', link: '/docs/usage/version-manager.md' },
+                { text: '游戏管理', link: '/docs/usage/game-manager.md' },
+                { text: '服务器管理', link: '/docs/usage/server-manager.md' },
+                { text: '启动器管理', link: '/docs/usage/launcher-manager.md' }
+            ]
         },
         {
             text: '赞助名单',
@@ -21,6 +27,14 @@ const themeConfig: DefaultTheme.Config = {
         {
             text: '更新时间轴',
             link: '/update-timeline'
+        },
+        {
+            text: '常见问题',
+            link: '/docs/questions/common_problem'
+        },
+        {
+            text: '反馈&建议',
+            link: 'https://daudmfrqwrm.feishu.cn/share/base/form/shrcnyFhUQbsWJrkw9ZqnaXYuoc'
         }
     ],
 
@@ -58,6 +72,16 @@ const themeConfig: DefaultTheme.Config = {
                 { text: '手动部署', link: '/docs/guide/manual-deployment.md' },
                 { text: 'Docker 自动化部署', link: '/docs/guide/docker-automated-deployment.md' },
                 { text: '客户端配置', link: '/docs/guide/client-configuration.md' },
+            ]
+        },
+        {
+            text: '使用指南',
+            items: [
+                { text: '管理端主页', link: '/docs/usage/home.md' },
+                { text: '版本管理', link: '/docs/usage/version-manager.md' },
+                { text: '游戏管理', link: '/docs/usage/game-manager.md' },
+                { text: '服务器管理', link: '/docs/usage/server-manager.md' },
+                { text: '启动器管理', link: '/docs/usage/launcher-manager.md' }
             ]
         },
         {

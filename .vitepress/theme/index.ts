@@ -16,7 +16,7 @@ import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-chang
 import { NolebaseUnlazyImg } from '@nolebase/vitepress-plugin-thumbnail-hash/client'
 
 import './styles/vars.css'
-import 'element-plus/dist/index.css'
+import './styles/blur.css'
 import 'viewerjs/dist/viewer.min.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'

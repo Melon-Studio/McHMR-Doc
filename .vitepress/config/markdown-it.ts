@@ -1,6 +1,7 @@
 import type { MarkdownOptions } from "vitepress"
 import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it"
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
+import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 
 const markdownitConfig: MarkdownOptions = {
     image: {
@@ -16,6 +17,7 @@ const markdownitConfig: MarkdownOptions = {
         md.use(UnlazyImages(), {
             imgElementTag: 'NolebaseUnlazyImg',
         })
+        md.use(BiDirectionalLinks()) 
     },
 }
 

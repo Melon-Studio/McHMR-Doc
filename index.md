@@ -7,7 +7,7 @@ titleTemplate: Minecraft 服务器客户端自动更新解决方案
 hero:
   name: McHMR
   text: Minecraft 服务器客户端自动更新解决方案
-  tagline: 一键更新，配置简单，功能强大
+  tagline: 免费开源，一键更新，配置简单，功能强大
   image:
     src: /logo.svg
     alt: McHMR
@@ -41,3 +41,4 @@ features:
     icon: 📦 
     details: 管理端可以直观看到各版本的下载量、单日/每月的下载量、服务器的玩家数量和服务器状态等。
 ---
+

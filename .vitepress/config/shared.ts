@@ -15,7 +15,7 @@ export const sharedConfig = defineConfig({
     head: [
         ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
         ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
-        ['meta', { name: 'keywords', content: 'Minecraft,我的世界,我的世界服务器,MC,麦块,MCBBS,我的世界客户端,自动更新,热更新,服主,腐竹' }],
+        ['meta', { name: 'keywords', content: 'Minecraft,游戏,我的世界,我的世界服务器,MC,麦块,MCBBS,mcmod,我的世界客户端,自动更新,热更新,服主,腐竹' }],
 
 
         ['script', { async: 'async', src: 'https://www.googletagmanager.com/gtag/js?id=G-NML2HM7B6Z' }],
