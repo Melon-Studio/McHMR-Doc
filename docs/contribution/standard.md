@@ -33,7 +33,7 @@
 
 你可以在下图中看到这些 `repo` 之间的关系：
 
-![Repo Diagram](../../public/sd1.png "Repo Diagram")
+![Repo Diagram](https://doc.dooper.top/sd1.png "Repo Diagram")
 
 ## 开始
 

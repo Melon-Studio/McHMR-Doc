@@ -67,10 +67,28 @@ jobs:
           echo "Updating version from $CURRENT_VERSION to $NEW_VERSION"
           echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
 
+      - name: Stop if no version update
+        if: env.NEW_VERSION == 'null'
+        run: echo "No version update needed. Stopping workflow."
+
+      - name: Update version.yml
+        if: env.NEW_VERSION != 'null'
+        run: |
+          yq eval ".version = \"$NEW_VERSION\"" -i .github/version.yml
+          
+      - name: Commit updated version.yml
+        if: env.NEW_VERSION != 'null'
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add .github/version.yml
+          git commit -m "chore: update version to $NEW_VERSION"
+          git push
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
-        if: steps.update_version.outputs.NEW_VERSION != 'null'
+        if: env.NEW_VERSION != 'null'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

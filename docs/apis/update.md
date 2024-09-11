@@ -11,7 +11,7 @@
 7. 服务器返回最新版本的游戏增量包。
 8. 客户端将最新版本的游戏覆盖安装到本地。
 
-![Update process](../../public/lc1.png "Update process")
+![Update process](https://doc.dooper.top/lc1.png "Update process")
 
 ## getLatestVersion
 
@@ -174,6 +174,8 @@
 
 下载增量包，将 GenerateIncrementalPackage 返回的 packageHash 参数传入后，服务器会返回文件，客户端接收即可。
 
+或者使用 getUpdateFileList API 之后，将 UUID 参数传入后，服务器也会返回文件，客户端接收即可。
+
 | 请求方式 | GET                             |
 | -------- | ---------------------------------- |
 | 请求地址 | /v1/update/download |
@@ -188,7 +190,7 @@
 
 | 参数  | 必填 | 简介     | 类型   | 示例值             |
 | ----- | ---- | -------- | ------ | ------------------ |
-| params | 是   | 文件哈希值 | String | 8DF7S9ADF87S9 |
+| fileHash | 是   | 文件哈希值或 UUID | String | 8DF7S9ADF87S9 |
 
 请求示例：
 
