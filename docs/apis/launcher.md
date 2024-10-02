@@ -98,9 +98,9 @@
 }
 ```
 
-## GetLauncherBackground(暂不支持)
+## GetLauncherBackground
 
-获取启动器背景图。
+获取启动器背景图，背景图是否更新取决于背景图 Hash 值。
 
 | 请求方式 | GET                                |
 | -------- | ---------------------------------- |
@@ -119,6 +119,7 @@
   "code": 0,
   "msg": "string",
   "data": {
+    "hasBackground": "1", // 1启用, 0禁用
     "backgroundUrl": "string",
     "backgroundHash": "string"
   }

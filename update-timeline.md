@@ -1,11 +1,30 @@
 ---
 title: 更新时间轴
+aside: false
 ---
 # 更新时间轴
 
 这里有所有 McHMR 发布的版本，通常情况下越靠前的版本，是最新的版本，你可以根据后面是否携带 <mark>Latest</mark> 来判断，目前程序是公测阶段，你可看到版本号之前携带了 <mark>Beta</mark>，McHMR 将在未来发布正式版本 <mark>Release</mark>，同样在未来我们也会发布 <mark>Alpha</mark> 版本提供大家体验最新功能。
 
-::: details Beta 1.0.2 (Latest)
+::: details Beta 1.0.3 (Latest)
+
+1. 新增更新器/启动器背景图 API
+2. 更新器已支持背景图功能
+3. 更新器 GUI 重构
+4. 新增更新器提示版本介绍
+5. 修复发布版本后修改导致的异常，对后端游戏管理差异生成后的文件缓存
+6. 修复爱发电域名更换导致的版本管理端前端无法打开的问题
+7. 修复版本管理端权限认证相关的问题
+8. API 开放接口地址优化
+9. 后端分片上传功能重构
+10. 管理端添加反馈菜单，方便服主使用及时反馈
+
+注意：1.0.3 公测包中已携带 SQL 修复文件，请按照文件内文档指示操作
+
+[点击此处](https://xiaofans.lanzouq.com/inHNt2be803e) 进行下载。
+:::
+
+::: details Beta 1.0.2
 
 1. 优化重复 IP 获取 Token 的提示
 2. 优化选择启动器时自动打开的文件夹为当前程序运行目录
@@ -15,7 +34,7 @@ title: 更新时间轴
 
 *注意：1.0.2 公测包中已携带 SQL 修复文件，请按照文件内文档指示操作
 
-[点击此处](https://xiaofans.lanzouq.com/iBWbE2728akf)进行下载。
+[点击此处](https://xiaofans.lanzouq.com/iBWbE2728akf) 进行下载。
 :::
 
 ::: details Beta 1.0.1
@@ -26,12 +45,12 @@ title: 更新时间轴
 4. 新增自动检测 .minecraft 文件夹
 5. 优化异常处理，优化部分代码逻辑
 
-[点击此处](https://xiaofans.lanzouq.com/itYFx26khccf)进行下载。
+[点击此处](https://xiaofans.lanzouq.com/itYFx26khccf) 进行下载。
 :::
 
 ::: details Beta 1.0.0
 
 初代版本发布。
 
-[点击此处](https://xiaofans.lanzouq.com/if8HU264jqve)进行下载。
+[点击此处](https://xiaofans.lanzouq.com/if8HU264jqve) 进行下载。
 :::
