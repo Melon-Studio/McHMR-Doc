@@ -118,10 +118,6 @@
 
 ## getUpdateFileList
 
-::: warning 注意
-该 API 将在未来版本中启用，目前无法使用，请随时关注文档变动。
-:::
-
 获取更新文件列表。客户端计算出需要更新的文件后，将这些文件以客户端根目录开始，组合成字符串数组发送到该 API，服务端会返回每个文件的 UUID，下载请通过 [[update#download]] API 直接拼接 UUID 后，服务端会直接返回二进制文件。
 
 值得注意的是，为防止恶意请求造成服务器损失，每个文件的下载有效期是 10 分钟，且与当前客户端 token 绑定，其他客户端用户请求会直接返回错误，每个文件的重试次数为 5 次，超过 5 次后会直接返回错误。
@@ -172,9 +168,11 @@
 
 ## download
 
-下载增量包，将 GenerateIncrementalPackage 返回的 packageHash 参数传入后，服务器会返回文件，客户端接收即可。
+下载增量包，将 GenerateIncrementalPackage 返回的 fileIdentification 参数（文件 Hash 值）传入后，服务器会返回文件，客户端接收后直接在游戏根目录解压实现安装。
 
-或者使用 getUpdateFileList API 之后，将 UUID 参数传入后，服务器也会返回文件，客户端接收即可。
+下载多文件，在 getUpdateFileList API，将 UUID 参数传入后，服务器也会返回文件，客户端接收即可。
+
+背景图，将 背景图片 Hash 值参数传入后，服务器会返回背景图片二进制文件，格式 JPEG。
 
 | 请求方式 | GET                             |
 | -------- | ---------------------------------- |
@@ -190,12 +188,13 @@
 
 | 参数  | 必填 | 简介     | 类型   | 示例值             |
 | ----- | ---- | -------- | ------ | ------------------ |
-| fileHash | 是   | 文件哈希值或 UUID | String | 8DF7S9ADF87S9 |
+| fileIdentification | 是   | 文件标识 | String | 8DF7S9ADF87S9 |
+| type     | 是   | 下载类型         | int    | 1 （1：增量包，2：背景图，3：多文件） |
 
 请求示例：
 
 ```url
-GET: https://example.com/api/v1/update/download?fileHash=8DF7S9ADF87S9
+GET: https://example.com/api/v1/update/download?fileHash=8DF7S9ADF87S9&type=1
 ```
 
 返回示例：
