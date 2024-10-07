@@ -21,7 +21,7 @@ aside: false
 
 注意：1.0.4 公测包中已携带 SQL 修复文件，请按照文件内文档指示操作
 
-[点击此处](https://xiaofans.lanzouq.com/i9x5Z2bpt14d) 进行下载。
+[点击此处](https://xiaofans.lanzouq.com/iFQTj2bx440f) 进行下载。
 :::
 
 ::: details Beta 1.0.3
