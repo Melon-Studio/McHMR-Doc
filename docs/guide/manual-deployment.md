@@ -2,34 +2,65 @@
 
 手动部署之前，你需要在你的主机上安装[快速上手](./start.md)中提到的环境：
 
-我们非常建议 使用 Docker 部署方案（暂未上线），或者使用宝塔面板进行手动部署，如果你是 Windows Server 系统，我们推荐使用小皮面板进行手动部署（但我们不推荐使用 Windows Server）。
+我们非常建议 使用 Docker 部署方案（暂未上线）。
+
+或者你可以简化部署操作：
+
+- Linux：推荐使用宝塔面板进行手动部署。
+- Windows Server：推荐使用小皮面板进行手动部署。
 
 ## Windows Server
 
 ### 前端部署
 
 1. 将【前端】目录内的文件的移入 Nginx 的 html 目录；
-2. 在 Nginx 的 conf 目录中找到 nginx.conf 文件，配置伪静态：
+2. 在 Nginx 的 conf 目录中找到 nginx.conf 文件，配置伪静态，打开配置文件后，你可能会看到以下内容：
 
     ```nginx
-    location / {
-        try_files $uri $uri/ /index.html;
+    server {
+        listen       80;
+        listen       [::]:80;
+        server_name  _;
+        root         /var/www/html/xxx;
+ 
+        include /etc/nginx/default.d/*.conf;
+
+		location / { # [!code focus]
+			try_files $uri $uri/ /index.html; # [!code focus]
+		} # [!code focus]
+ 
     }
     ```
 
-3. 修改根目录下的 webConfig.js 中的 webApiBaseUrl 的值为你后端的值，通常情况下为你的公网IP和后端端口，可以使用域名
+    在 `location / {}` 块中配置 `try_files $uri $uri/ /index.html;` 如果没有 `location / {}` 块，请参照上方自行添加。
+
+3. 修改根目录下的 `webConfig.js` 中的 `webApiBaseUrl` 的值为你后端的值，通常情况下为你的公网IP和后端端口，可以使用域名。
+
+    注意：请使用公网 IP + 端口。为防止因未进行备案导致的拦截，尽量不要使用域名；阿里云、腾讯云等服务商的服务器可能会对网站服务拦截，请尽量避免使用大厂的服务器。
+
+    ```js
+    window.webConfig = {
+        /* URL 末尾不要加 '/' 否则无法正常访问 */
+        "webApiBaseUrl": "http://127.0.0.1:8080",
+    }
+    ```
+
 4. 启动 Nginx，正常访问版本管理端。
 
 ---
 
 访问地址：
-内网：http://127.0.0.1:port 其中 port 为你在 Nginx 配置的端口。
 
-外网：http://IP：port 其中 IP 为你的公网IP，port 为你在 Nginx 配置的端口。
+```txt
+内网：http://127.0.0.1:{port}
+外网：http://{IP}:{port} 或 http://{域名}:{port}
 
-如果绑定了域名，可以直接访问域名。
+port：在 Nginx 配置的端口
+IP: 你的公网 IP
+域名：如果有可使用
+```
 
-初始账号：admin 初始密码：admin123
+初始账号和密码：admin / admin123
 
 ### 后端部署
 
