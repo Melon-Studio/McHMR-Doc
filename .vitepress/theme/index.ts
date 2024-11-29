@@ -5,7 +5,6 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import type { EnhanceAppContext } from "vitepress/client"
 
-import FooterMessage from './components/FooterMessage.vue'
 import vitepressNprogress from '@andatoshiki/vitepress-plugin-nprogress'
 import imageViewer from 'vitepress-plugin-image-viewer'
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue'
@@ -31,7 +30,6 @@ const theme: Theme = {
         return h(DefaultTheme.Layout, null, {
             'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
             'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
-            'home-features-after': () => h(FooterMessage),
         })
     },
     enhanceApp(ctx: EnhanceAppContext) {

@@ -42,3 +42,10 @@ features:
     details: 管理端可以直观看到各版本的下载量、单日/每月的下载量、服务器的玩家数量和服务器状态等。
 ---
 
+<script setup>
+  import Partner from './.vitepress/theme/components/Partner.vue'
+  import FooterMessage from './.vitepress/theme/components/FooterMessage.vue'
+</script>
+
+<Partner />
+<FooterMessage />
