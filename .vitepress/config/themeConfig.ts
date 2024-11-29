@@ -70,8 +70,7 @@ const themeConfig: DefaultTheme.Config = {
                 { text: '什么是 McHMR？', link: '/docs/guide/what-is-mchmr.md' },
                 { text: '快速上手', link: '/docs/guide/start.md' },
                 { text: '手动部署', link: '/docs/guide/manual-deployment.md' },
-                { text: 'Docker 自动化部署', link: '/docs/guide/docker-automated-deployment.md' },
-                { text: '客户端配置', link: '/docs/guide/client-configuration.md' },
+                { text: 'Docker 自动化部署', link: '/docs/guide/docker-automated-deployment.md' }
             ]
         },
         {

@@ -44,7 +44,7 @@
 
 获取最新版本游戏的文件哈希列表。
 
-开发者需要将哈希列表数据在本地进行客户端校验。
+开发者需要将哈希列表数据在本地与客户端进行校验。
 
 | 请求方式 | GET                           |
 | -------- | ----------------------------- |
@@ -69,10 +69,6 @@
 ```
 
 ## generateIncrementalPackage
-
-::: warning 注意
-该 API 将在未来版本中弃用，替代 API 为 [[update#getupdatefilelist|获取更新文件列表]]，目前可以正常使用。
-:::
 
 生成增量包，请求该接口后需要等待服务器传数据，服务器会生成增量包，该操作耗时较长，客户端连接超时时间建议设置 1 分钟。
 
@@ -170,7 +166,7 @@
 
 下载增量包，将 GenerateIncrementalPackage 返回的 fileIdentification 参数（文件 Hash 值）传入后，服务器会返回文件，客户端接收后直接在游戏根目录解压实现安装。
 
-下载多文件，在 getUpdateFileList API，将 UUID 参数传入后，服务器也会返回文件，客户端接收即可。
+下载多文件，在 getUpdateFileList API，将 UUID 参数传入 fileIdentification 参数后，服务器也会返回文件，客户端接收即可。
 
 背景图，将 背景图片 Hash 值参数传入后，服务器会返回背景图片二进制文件，格式 JPEG。
 

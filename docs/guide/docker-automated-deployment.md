@@ -16,7 +16,7 @@
 
 2. 安装 Docker 环境
 
-    ```bash
+    ```sh
     curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
     ```
 
@@ -24,14 +24,14 @@
 
 3. 下载 Docker 配置文件
 
-    ```bash
+    ```sh
     git clone https://github.com/Melon-Studio/McHMR-Docker.git
     cd Melon-Studio/McHMR-Docker
     ```
 
 4. 修改配置文件
 
-    ```bash
+    ```sh
     vim docker-compose.yml
     ```
 
@@ -45,11 +45,11 @@
 
 5. 启动 Docker 容器
 
-    ```bash
+    ```sh
     docker-compose up -d
     ```
 
-6. 访问管理端（注意这里的端口默认80，除非你在`MCHMR_FRONT_PORT`设定了其他端口）
+6. 访问管理端（注意这里的端口默认 80，除非你在`MCHMR_FRONT_PORT`设定了其他端口）
 
     ```text
     http://你的服务器IP:80

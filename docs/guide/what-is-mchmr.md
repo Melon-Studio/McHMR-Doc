@@ -22,7 +22,7 @@ McHMR(全称：Minecraft Hot Module Replacement) 是为解决 Minecraft 服务�
 
     这是 McHMR 分叉的 [Hello Minecraft! Launcher(HMCL)](https://github.com/HMCL-dev/HMCL) 启动器，使其支持了自动更新功能。
 
-- McHMR-Launcher-for-PCL2
+- McHMR-Launcher-for-PCL2 （已弃用，由于 PCL2 未明确开源协议，故无权另外分叉热更新版本，需要得到原作者同意，正在积极交涉中）
 
     这是 McHMR 分叉的 [Plain Craft Launcher(PCL2)](https://github.com/Hex-Dragon/PCL2) 启动器，使其支持了自动更新功能。
 
